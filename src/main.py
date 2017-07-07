@@ -44,6 +44,20 @@ def build_response(session_attributes, speechlet_response):
 
 # --------------- Your functions to implement your intents ------------------
 
+
+import requests
+
+r = requests.get('https://raw.githubusercontent.com/ehmatthes/pcc/master/chapter_10/pi_million_digits.txt')
+
+pi_string = r.text
+
+for rs in r:
+    pi_string += rs.strip()
+    
+print(pi_string[:32] + "...")
+print(len(pi_string))
+
+
 def birthday_pi(intent, session):
     session_attributes = {}
     reprompt_text = None
@@ -51,13 +65,11 @@ def birthday_pi(intent, session):
     should_end_session = True
     
     
-
     card_output = ""
     speech_output = "<speak></speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("", card_output, speech_output, reprompt_text, should_end_session))
-
 
 
 def stop(intent, session):
