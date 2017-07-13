@@ -66,7 +66,7 @@ def birthday_pi(intent, session):
     
     
     card_output = ""
-    speech_output = "<speak></speak>"
+    speech_output = "<speak>abcde</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("", card_output, speech_output, reprompt_text, should_end_session))
