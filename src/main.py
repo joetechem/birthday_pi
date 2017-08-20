@@ -44,6 +44,7 @@ def build_response(session_attributes, speechlet_response):
 
 # --------------- Your functions to implement your intents ------------------
 
+### From working on the Good Actor skill, the api call needs to be in the callable function itself to work correctly.
 
 import requests
 
