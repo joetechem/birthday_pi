@@ -1,13 +1,6 @@
-""" 
-Testing functionality locally (not in AWS)
-    A simple program returning a response to user from an api call
-    to a GitHub gist. Lets the user know if their birthday is found
-    in pi.
-"""
-
 import requests
 
-r = requests.get('https://raw.githubusercontent.com/ehmatthes/pcc/master/chapter_10/pi_million_digits.txt')
+r = requests.get('https://raw.githubusercontent.com/joetechem/birthday_pi/master/million_pi_digits/million_pi_digits.txt')
 
 pi_string = r.text
 
