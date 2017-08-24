@@ -9,7 +9,7 @@ for rs in r:
     
 #print(pi_string[:32] + "...")
 #print(len(pi_string))
-
+bug test
 birthday = raw_input("Enter your birthday, in the form mmddyy: ")
 if birthday in pi_string:
     print("Your birthday appears in the first million digits of pi!")
